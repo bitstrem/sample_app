@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>annotate-models-1.0.4 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>annotate-models-1.0.4 Documentation</h1>
+
+  
+  <div id="main">
+    
+<h2><a href="AnnotateModels.html">AnnotateModels</a></h2>
+
+<p>Add a comment summarizing the current schema to the top of each
+ActiveRecord model source file.</p>
+
+<pre># == Schema Information
+#
+#  id                  :integer(11)   not null
+#  quantity            :integer(11)   
+#  product_id          :integer(11)   
+#  unit_price          :float         
+#  order_id            :integer(11)   
+#
+
+class LineItem &lt; ActiveRecord::Base 
+  belongs_to :product
+
+ end</pre>
+
+<p>Note that this code will blow away the initial comment block in your models
+if it looks like it was  previously added by annotate models, so you don’t
+want to add additional text to an automatically  created comment block.</p>
+
+<h2>Install</h2>
+
+<pre>sudo gem install annotate-models</pre>
+
+<h2>Usage</h2>
+
+<pre>cd [your project]
+annotate
+annotate -d
+annotate -p [before|after]
+annotate -h</pre>
+
+<h2>Source</h2>
+
+<pre>http://github.com/ctran/annotate_models</pre>
+
+<h2>Author</h2>
+
+<pre>Dave Thomas
+Pragmatic Programmers, LLC</pre>
+
+<p>Released under the same license as Ruby. No Support. No Warranty.</p>
+
+<h2>Modifications</h2>
+
+<pre>- alex@pivotallabs.com
+- Cuong Tran - http://github.com/ctran
+- Jack Danger - http://github.com/JackDanger
+- Michael Bumann - http://github.com/bumi
+- Henrik Nyh - http://github.com/henrik</pre>
+
+  </div>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="History_txt.html">History.txt</a></li>
+    
+      <li class="file"><a href="License_txt.html">License.txt</a></li>
+    
+      <li class="file"><a href="Manifest_txt.html">Manifest.txt</a></li>
+    
+      <li class="file"><a href="README_txt.html">README.txt</a></li>
+    
+      <li class="file"><a href="website/index_txt.html">index.txt</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="AnnotateModels.html">AnnotateModels</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="AnnotateModels.html#method-c-annotate">::annotate &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-annotate_one_file">::annotate_one_file &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-do_annotations">::do_annotations &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-get_model_class">::get_model_class &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-get_model_files">::get_model_files &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-get_schema_info">::get_schema_info &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-quote">::quote &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-remove_annotation_of_file">::remove_annotation_of_file &mdash; AnnotateModels</a></li>
+    
+      <li><a href="AnnotateModels.html#method-c-remove_annotations">::remove_annotations &mdash; AnnotateModels</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
