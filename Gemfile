@@ -4,6 +4,7 @@ gem 'rails', '3.0.7'
 gem 'sqlite3'
 gem 'webrat'
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'heroku'
 group :development do
 	gem 'rspec-rails'
 	gem 'rspec-core', '2.5.1'
