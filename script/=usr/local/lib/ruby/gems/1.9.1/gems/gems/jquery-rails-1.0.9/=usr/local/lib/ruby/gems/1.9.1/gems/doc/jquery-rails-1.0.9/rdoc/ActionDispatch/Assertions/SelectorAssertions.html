@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: ActionDispatch::Assertions::SelectorAssertions</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/jquery-rails/assert_select_jquery_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/jquery-rails/assert_select_jquery.rb">lib/jquery-rails/assert_select_jquery.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-assert_select_jquery">#assert_select_jquery</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Jquery.html">Jquery</a></li>
+        
+          <li><a href="../../Jquery/Generators.html">Jquery::Generators</a></li>
+        
+          <li><a href="../../Jquery/Generators/InstallGenerator.html">Jquery::Generators::InstallGenerator</a></li>
+        
+          <li><a href="../../Jquery/Rails.html">Jquery::Rails</a></li>
+        
+          <li><a href="../../Jquery/Rails/Engine.html">Jquery::Rails::Engine</a></li>
+        
+          <li><a href="../../Jquery/Rails/Railtie.html">Jquery::Rails::Railtie</a></li>
+        
+          <li><a href="../../ActionDispatch.html">ActionDispatch</a></li>
+        
+          <li><a href="../../ActionDispatch/Assertions.html">ActionDispatch::Assertions</a></li>
+        
+          <li><a href="../../ActionDispatch/Assertions/SelectorAssertions.html">ActionDispatch::Assertions::SelectorAssertions</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">ActionDispatch::Assertions::SelectorAssertions</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="PATTERN_HTML">PATTERN_HTML</a></dt>
+          
+          <dd class="description"><p>Selects content from a JQuery response.  Patterned loosely on
+assert_select_rjs.</p>
+
+<h3>Narrowing down</h3>
+
+<p>With no arguments, asserts that one or more method calls are made.</p>
+
+<p>Use the <tt>method</tt> argument to narrow down the assertion to only
+statements that call that specific method.</p>
+
+<p>Use the <tt>opt</tt> argument to narrow down the assertion to only
+statements that pass <tt>opt</tt> as the first argument.</p>
+
+<p>Use the <tt>id</tt> argument to narrow down the assertion to only
+statements that invoke methods on the result of using that identifier as a
+selector.</p>
+
+<h3>Using blocks</h3>
+
+<p>Without a block, +assert_select_jquery_ merely asserts that the response
+contains one or more statements that match the conditions specified above</p>
+
+<p>With a block +assert_select_jquery_ also asserts that the method call
+passes a javascript escaped string containing HTML.  All such HTML
+fragments are selected and passed to the block.  Nested assertions are
+supported.</p>
+
+<h3>Examples</h3>
+
+<p># asserts that the #notice element is hidden assert_select :hide, ‘#notice’</p>
+
+<p># asserts that the #cart element is shown with a blind parameter
+assert_select :show, :blind, ‘#cart’</p>
+
+<p># asserts that #cart content contains a #current_item assert_select :html,
+‘#cart’ do</p>
+
+<pre>assert_select '#current_item'</pre>
+
+<p>end</p></dd>
+          
+        
+          <dt><a name="PATTERN_UNICODE_ESCAPED_CHAR">PATTERN_UNICODE_ESCAPED_CHAR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="assert_select_jquery-method" class="method-detail ">
+          <a name="method-i-assert_select_jquery"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">assert_select_jquery</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="assert_select_jquery-source">
+<pre>
+<span class="ruby-comment"># File lib/jquery-rails/assert_select_jquery.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_select_jquery</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">jquery_method</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">jquery_opt</span>    = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">id</span>            = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">pattern</span> = <span class="ruby-node">&quot;\\.#{jquery_method || '\\w+'}\\(&quot;</span>
+  <span class="ruby-identifier">pattern</span> = <span class="ruby-node">&quot;#{pattern}['\&quot;]#{jquery_opt}['\&quot;],?\\s*&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">jquery_opt</span>
+  <span class="ruby-identifier">pattern</span> = <span class="ruby-node">&quot;#{pattern}#{PATTERN_HTML}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+  <span class="ruby-identifier">pattern</span> = <span class="ruby-node">&quot;(?:jQuery|\\$)\\(['\&quot;]#{id}['\&quot;]\\)#{pattern}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span>
+
+  <span class="ruby-identifier">fragments</span> = []
+  <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pattern</span>)).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">doc</span> = <span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">unescape_js</span>(<span class="ruby-identifier">match</span>.<span class="ruby-identifier">first</span>))
+    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">fragments</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">child</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">tag?</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">fragments</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">opts</span> = [<span class="ruby-identifier">jquery_method</span>, <span class="ruby-identifier">jquery_opt</span>, <span class="ruby-identifier">id</span>].<span class="ruby-identifier">compact</span>
+    <span class="ruby-identifier">flunk</span> <span class="ruby-node">&quot;No JQuery call matches #{opts.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">in_scope</span>, <span class="ruby-ivar">@selected</span> = <span class="ruby-ivar">@selected</span>, <span class="ruby-identifier">fragments</span>
+      <span class="ruby-keyword">yield</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-ivar">@selected</span> = <span class="ruby-identifier">in_scope</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- assert_select_jquery-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- assert_select_jquery-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
